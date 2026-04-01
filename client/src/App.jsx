@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './App.css';
 import { AuthProvider, useAuth } from './context/AuthContext';
 import Login from './pages/Login';
@@ -10,9 +10,18 @@ import SearchPage from './pages/SearchPage';
 import Sidebar from './components/Sidebar';
 
 function AppInner() {
-  const { user, loading } = useAuth();
+  const { user, loading, refetch } = useAuth();
   const [authPage, setAuthPage] = useState('login');
   const [page, setPage] = useState('dashboard');
+
+  // Handle redirect back from Google OAuth
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('auth') === 'success') {
+      refetch();
+      window.history.replaceState({}, '', '/');
+    }
+  }, []);
 
   if (loading) {
     return (

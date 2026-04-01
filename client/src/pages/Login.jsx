@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useAuth } from '../context/AuthContext';
+import GoogleButton from '../components/GoogleButton';
 
 export default function Login({ onSwitch }) {
   const { login } = useAuth();
@@ -24,6 +25,9 @@ export default function Login({ onSwitch }) {
           <h1>StudySync</h1>
           <p>Sign in to your account</p>
         </div>
+
+        <GoogleButton label="Sign in with Google" />
+        <div className="divider">or continue with email</div>
 
         {error && <div className="error-msg">{error}</div>}
 

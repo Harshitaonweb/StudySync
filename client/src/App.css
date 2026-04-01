@@ -344,6 +344,31 @@
 .auth-footer a { color: var(--accent2); font-weight: 500; }
 .auth-footer a:hover { text-decoration: underline; }
 
+.google-btn {
+  width: 100%;
+  justify-content: center;
+  gap: 10px;
+  border-color: var(--border);
+  color: var(--text);
+  font-size: 14px;
+}
+.google-btn:hover { background: var(--bg3); border-color: var(--text3); }
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 18px 0;
+  color: var(--text3);
+  font-size: 12px;
+}
+.divider::before, .divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
 .error-msg {
   background: rgba(248,113,113,0.1);
   border: 1px solid rgba(248,113,113,0.2);
