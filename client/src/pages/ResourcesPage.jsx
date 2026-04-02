@@ -37,10 +37,10 @@ export default function ResourcesPage() {
     <div>
       <div className="page-header">
         <div>
-          <div className="page-title">Resources</div>
-          <div className="page-subtitle">{resources.length} resources found</div>
+          <div className="page-title">Spell Library</div>
+          <div className="page-subtitle">{resources.length} scrolls in the collection</div>
         </div>
-        <button className="btn btn-primary" onClick={() => setModal('add')}>+ Add Resource</button>
+        <button className="btn btn-primary" onClick={() => setModal('add')}>✦ Add Scroll</button>
       </div>
 
       <div className="search-bar">
@@ -54,8 +54,8 @@ export default function ResourcesPage() {
       ) : resources.length === 0 ? (
         <div className="empty-state">
           <BookOpen size={40} />
-          <h3>No resources found</h3>
-          <p>Try adjusting your filters or add a new resource</p>
+          <h3>No scrolls found</h3>
+          <p>Try different incantations or add a new scroll</p>
         </div>
       ) : (
         <div className="resource-grid">

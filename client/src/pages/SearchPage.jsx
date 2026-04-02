@@ -30,8 +30,8 @@ export default function SearchPage() {
     <div>
       <div className="page-header">
         <div>
-          <div className="page-title">Search</div>
-          <div className="page-subtitle">Find resources across the platform</div>
+          <div className="page-title">Accio Search</div>
+          <div className="page-subtitle">Summon any scroll from the library</div>
         </div>
       </div>
 
@@ -84,8 +84,8 @@ export default function SearchPage() {
       {!searched && !loading && (
         <div className="empty-state">
           <Search size={40} />
-          <h3>Start searching</h3>
-          <p>Enter a keyword, apply filters, or search by tags</p>
+          <h3>Cast your spell</h3>
+          <p>Speak the incantation — "Accio [topic]"</p>
         </div>
       )}
     </div>

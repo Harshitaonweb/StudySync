@@ -83,10 +83,10 @@ export default function GroupPage() {
     <div>
       <div className="page-header">
         <div>
-          <div className="page-title">Groups</div>
-          <div className="page-subtitle">Collaborate with others</div>
+          <div className="page-title">Study Houses</div>
+          <div className="page-subtitle">Collaborate with fellow wizards</div>
         </div>
-        <button className="btn btn-primary" onClick={() => setShowCreate(true)}><Plus size={16} /> New Group</button>
+        <button className="btn btn-primary" onClick={() => setShowCreate(true)}><Plus size={16} /> Found a House</button>
       </div>
 
       {error && <div className="error-msg" style={{ marginBottom: 16 }}>{error}</div>}

@@ -43,7 +43,7 @@ export default function ResourceModal({ resource, onClose, onSaved }) {
     <div className="modal-overlay" onClick={onClose}>
       <div className="modal" onClick={(e) => e.stopPropagation()}>
         <div className="modal-header">
-          <h2 className="modal-title">{isEdit ? 'Edit Resource' : 'Add Resource'}</h2>
+          <h2 className="modal-title">{isEdit ? '✦ Edit Scroll' : '✦ Add New Scroll'}</h2>
           <button className="icon-btn" onClick={onClose}><X size={16} /></button>
         </div>
 
@@ -93,7 +93,7 @@ export default function ResourceModal({ resource, onClose, onSaved }) {
           <div style={{ display: 'flex', gap: 10, justifyContent: 'flex-end', marginTop: 8 }}>
             <button type="button" className="btn btn-ghost" onClick={onClose}>Cancel</button>
             <button type="submit" className="btn btn-primary" disabled={loading}>
-              {loading ? <span className="spinner" /> : isEdit ? 'Save Changes' : 'Add Resource'}
+              {loading ? <span className="spinner" /> : isEdit ? '✦ Save Changes' : '✦ Add to Library'}
             </button>
           </div>
         </form>
