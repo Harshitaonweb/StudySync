@@ -21,7 +21,7 @@ const DOODLES = [
   // Sorting hat
   { id: 'hat', svg: <svg viewBox="0 0 60 60" fill="none"><path d="M30 5 Q20 20 15 35 L45 35 Q40 20 30 5Z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round"/><path d="M8 42 Q30 35 52 42 Q50 50 30 50 Q10 50 8 42Z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round"/><path d="M8 42 L4 38 Q6 36 8 38" stroke="currentColor" strokeWidth="1.5"/></svg>, size: 42 },
   // Deathly hallows symbol
-  { id: 'hallows', svg: <svg viewBox="0 0 50 60" fill="none"><triangle/><path d="M25 5 L45 50 L5 50 Z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round"/><line x1="25" y1="5" x2="25" y2="50" stroke="currentColor" strokeWidth="1.5"/><circle cx="25" cy="35" r="10" stroke="currentColor" strokeWidth="1.5"/></svg>, size: 38 },
+  { id: 'hallows', svg: <svg viewBox="0 0 50 60" fill="none"><path d="M25 5 L45 50 L5 50 Z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round"/><line x1="25" y1="5" x2="25" y2="50" stroke="currentColor" strokeWidth="1.5"/><circle cx="25" cy="35" r="10" stroke="currentColor" strokeWidth="1.5"/></svg>, size: 38 },
 ];
 
 // Positions for doodles — spread across the screen
