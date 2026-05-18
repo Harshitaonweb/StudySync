@@ -1,37 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&family=Cinzel:wght@400;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap');
 
+/* Dynamic house theme variables — overridden by HouseContext */
 :root {
-  --bg: #0d0a07;
-  --bg2: #13100c;
-  --bg3: #1a1510;
-  --bg4: #221c14;
-  --border: #3a2e1e;
-  --border2: #5a4a2e;
-
-  --gold: #c9a84c;
-  --gold2: #e8c96a;
-  --gold-glow: rgba(201, 168, 76, 0.15);
-  --gold-dim: #7a6030;
-
-  --crimson: #8b1a1a;
-  --crimson2: #c0392b;
-  --crimson-glow: rgba(139, 26, 26, 0.2);
-
-  --green: #1a4a2e;
-  --green2: #2d7a4a;
-
-  --parchment: #f5e6c8;
-  --parchment2: #d4b896;
-  --parchment3: #a08060;
-
-  --text: #e8d5b0;
-  --text2: #b09060;
-  --text3: #6a5030;
-
-  --magic: #7c4dff;
-  --magic2: #b39ddb;
-  --magic-glow: rgba(124, 77, 255, 0.2);
-
+  --primary: #1a3a6b;
+  --primary2: #2980b9;
+  --accent: #c9a84c;
+  --accent2: #e8c96a;
+  --bg: #05070d;
+  --bg2: #080d18;
+  --bg3: #0d1525;
+  --bg4: #121e33;
+  --border: #1a2d4d;
+  --border2: #2d4d80;
+  --glow: rgba(26,58,107,0.2);
+  --text: #c8d8f0;
+  --text2: #6e8eb8;
+  --text3: #2d4d80;
+  --gradient: linear-gradient(135deg, #0d1e3d, #1a3a6b, #c9a84c);
+  --gradient-bg: radial-gradient(ellipse at 20% 50%, rgba(26,58,107,0.1) 0%, transparent 60%);
   --radius: 4px;
   --radius-sm: 3px;
 }
@@ -44,9 +30,8 @@ body {
   color: var(--text);
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
-  background-image:
-    radial-gradient(ellipse at 20% 50%, rgba(139,26,26,0.04) 0%, transparent 60%),
-    radial-gradient(ellipse at 80% 20%, rgba(201,168,76,0.04) 0%, transparent 60%);
+  background-image: var(--gradient-bg);
+  transition: background 0.5s, color 0.5s;
 }
 
 h1, h2, h3, h4 {
@@ -56,10 +41,10 @@ h1, h2, h3, h4 {
 
 a { color: inherit; text-decoration: none; }
 
-::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar { width: 5px; }
 ::-webkit-scrollbar-track { background: var(--bg2); }
 ::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 2px; }
-::-webkit-scrollbar-thumb:hover { background: var(--gold-dim); }
+::-webkit-scrollbar-thumb:hover { background: var(--primary); }
 
 /* ── Buttons ── */
 .btn {
@@ -68,28 +53,25 @@ a { color: inherit; text-decoration: none; }
   gap: 8px;
   padding: 9px 20px;
   border-radius: var(--radius);
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 600;
   cursor: pointer;
   border: none;
   transition: all 0.2s;
   font-family: 'Cinzel', serif;
-  letter-spacing: 0.05em;
-  position: relative;
-  overflow: hidden;
+  letter-spacing: 0.06em;
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, #8b6914, #c9a84c, #8b6914);
-  background-size: 200% 100%;
-  color: #1a1208;
-  border: 1px solid var(--gold);
-  box-shadow: 0 0 12px rgba(201,168,76,0.2), inset 0 1px 0 rgba(255,255,255,0.1);
+  background: linear-gradient(135deg, var(--bg4), var(--primary));
+  color: var(--text);
+  border: 1px solid var(--primary);
+  box-shadow: 0 0 12px var(--glow);
 }
 .btn-primary:hover {
-  background-position: right center;
-  box-shadow: 0 0 24px rgba(201,168,76,0.4), inset 0 1px 0 rgba(255,255,255,0.15);
+  box-shadow: 0 0 24px var(--glow), 0 4px 16px rgba(0,0,0,0.4);
   transform: translateY(-1px);
+  filter: brightness(1.1);
 }
 
 .btn-ghost {
@@ -97,7 +79,7 @@ a { color: inherit; text-decoration: none; }
   color: var(--text2);
   border: 1px solid var(--border2);
 }
-.btn-ghost:hover { background: var(--bg3); color: var(--text); border-color: var(--gold-dim); }
+.btn-ghost:hover { background: var(--bg3); color: var(--text); border-color: var(--primary); }
 
 .btn-danger {
   background: rgba(139,26,26,0.15);
@@ -119,7 +101,7 @@ a { color: inherit; text-decoration: none; }
   position: absolute;
   inset: 0;
   border-radius: var(--radius);
-  background: linear-gradient(135deg, rgba(201,168,76,0.03) 0%, transparent 50%);
+  background: linear-gradient(135deg, var(--glow) 0%, transparent 50%);
   pointer-events: none;
 }
 
@@ -137,11 +119,10 @@ a { color: inherit; text-decoration: none; }
   transition: border-color 0.2s, box-shadow 0.2s;
 }
 .input:focus {
-  border-color: var(--gold);
-  box-shadow: 0 0 0 2px rgba(201,168,76,0.1);
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px var(--glow);
 }
-.input::placeholder { color: var(--text3); }
-
+.input::placeholder { color: var(--text3); font-style: italic; }
 select.input { appearance: none; cursor: pointer; }
 
 /* ── Badges ── */
@@ -156,14 +137,12 @@ select.input { appearance: none; cursor: pointer; }
   text-transform: uppercase;
   font-family: 'Cinzel', serif;
 }
-
 .badge-pdf    { background: rgba(139,26,26,0.2);  color: #e07070; border: 1px solid rgba(139,26,26,0.4); }
-.badge-video  { background: rgba(201,168,76,0.15); color: var(--gold2); border: 1px solid rgba(201,168,76,0.3); }
+.badge-video  { background: rgba(201,168,76,0.15); color: #e8c96a; border: 1px solid rgba(201,168,76,0.3); }
 .badge-note   { background: rgba(26,74,46,0.2);   color: #6dbf8a; border: 1px solid rgba(45,122,74,0.4); }
-.badge-code   { background: rgba(124,77,255,0.15); color: var(--magic2); border: 1px solid rgba(124,77,255,0.3); }
-
+.badge-code   { background: rgba(124,77,255,0.15); color: #b39ddb; border: 1px solid rgba(124,77,255,0.3); }
 .badge-beginner     { background: rgba(26,74,46,0.2);   color: #6dbf8a; border: 1px solid rgba(45,122,74,0.4); }
-.badge-intermediate { background: rgba(201,168,76,0.15); color: var(--gold2); border: 1px solid rgba(201,168,76,0.3); }
+.badge-intermediate { background: rgba(201,168,76,0.15); color: #e8c96a; border: 1px solid rgba(201,168,76,0.3); }
 .badge-advanced     { background: rgba(139,26,26,0.2);  color: #e07070; border: 1px solid rgba(139,26,26,0.4); }
 
 /* ── Tags ── */
@@ -171,9 +150,9 @@ select.input { appearance: none; cursor: pointer; }
   display: inline-flex;
   align-items: center;
   padding: 2px 10px;
-  background: rgba(201,168,76,0.08);
-  color: var(--gold);
-  border: 1px solid rgba(201,168,76,0.2);
+  background: var(--glow);
+  color: var(--accent2);
+  border: 1px solid var(--border2);
   border-radius: 2px;
   font-size: 12px;
   font-family: 'Crimson Text', serif;
