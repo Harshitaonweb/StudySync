@@ -60,6 +60,8 @@ export default function HogwartsCastle() {
       height: '45vh',
       minHeight: 280,
       overflow: 'hidden',
+      maskImage: 'linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.4) 20%, rgba(0,0,0,0.8) 50%, black 100%)',
+      WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.4) 20%, rgba(0,0,0,0.8) 50%, black 100%)',
     }}>
       <svg
         viewBox="0 0 1440 400"
