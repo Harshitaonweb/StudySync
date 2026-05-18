@@ -1,89 +1,121 @@
 import { createContext, useContext, useState, useEffect } from 'react';
 
-const HOUSES = {
+export const HOUSES = {
   gryffindor: {
     name: 'Gryffindor',
     animal: '🦁',
-    traits: 'Bravery, Nerve, Chivalry',
-    primary: '#c0392b',
-    secondary: '#e74c3c',
-    accent: '#f1c40f',
-    accent2: '#f39c12',
-    bg: '#0d0705',
-    bg2: '#150a08',
-    bg3: '#1e0f0b',
-    bg4: '#2a1510',
-    border: '#3d1a12',
-    border2: '#6b2d1e',
-    glow: 'rgba(192,57,43,0.15)',
-    textPrimary: '#f5d5c8',
-    textSecondary: '#c4896e',
-    textDim: '#7a4030',
-    gradient: 'linear-gradient(135deg, #8b0000, #c0392b, #f1c40f)',
-    gradientBg: 'radial-gradient(ellipse at 20% 50%, rgba(192,57,43,0.08) 0%, transparent 60%), radial-gradient(ellipse at 80% 20%, rgba(241,196,15,0.06) 0%, transparent 60%)',
+    traits: 'Bravery · Nerve · Chivalry',
+    primary: '#ae0001',
+    secondary: '#d4000a',
+    accent: '#eeba30',
+    accent2: '#ffd700',
+    bg: '#0e0500',
+    bg2: '#1a0800',
+    bg3: '#260d00',
+    bg4: '#3d1500',
+    border: '#5c1a00',
+    border2: '#8b2500',
+    glow: 'rgba(174,0,1,0.25)',
+    glowAccent: 'rgba(238,186,48,0.2)',
+    textPrimary: '#ffe8c0',
+    textSecondary: '#d4956a',
+    textDim: '#7a3a1a',
+    gradient: 'linear-gradient(135deg, #ae0001 0%, #d4000a 40%, #eeba30 100%)',
+    gradientBg: `
+      radial-gradient(ellipse at 15% 50%, rgba(174,0,1,0.18) 0%, transparent 55%),
+      radial-gradient(ellipse at 85% 20%, rgba(238,186,48,0.12) 0%, transparent 50%),
+      radial-gradient(ellipse at 50% 90%, rgba(174,0,1,0.1) 0%, transparent 40%)
+    `,
+    particleColor: 'rgba(238,186,48,0.6)',
+    shimmer: 'linear-gradient(90deg, transparent, rgba(238,186,48,0.15), transparent)',
+    cardGlow: '0 0 30px rgba(174,0,1,0.3), 0 0 60px rgba(238,186,48,0.1)',
   },
   slytherin: {
     name: 'Slytherin',
     animal: '🐍',
-    traits: 'Ambition, Cunning, Leadership',
+    traits: 'Ambition · Cunning · Leadership',
     primary: '#1a6b3a',
-    secondary: '#27ae60',
-    accent: '#c0c0c0',
-    accent2: '#e8e8e8',
-    bg: '#050d07',
-    bg2: '#0a1510',
-    bg3: '#0f1e16',
-    bg4: '#152a1e',
-    border: '#1a3d28',
-    border2: '#2d6b45',
-    glow: 'rgba(26,107,58,0.15)',
-    textPrimary: '#c8f0d5',
-    textSecondary: '#6eb88a',
+    secondary: '#0d5c2e',
+    accent: '#aaaaaa',
+    accent2: '#d4d4d4',
+    bg: '#00080a',
+    bg2: '#001510',
+    bg3: '#002018',
+    bg4: '#003020',
+    border: '#004d30',
+    border2: '#006b40',
+    glow: 'rgba(26,107,58,0.25)',
+    glowAccent: 'rgba(170,170,170,0.15)',
+    textPrimary: '#c8f0d8',
+    textSecondary: '#6ab88a',
     textDim: '#2d6b45',
-    gradient: 'linear-gradient(135deg, #0d3d1e, #1a6b3a, #c0c0c0)',
-    gradientBg: 'radial-gradient(ellipse at 20% 50%, rgba(26,107,58,0.08) 0%, transparent 60%), radial-gradient(ellipse at 80% 20%, rgba(192,192,192,0.04) 0%, transparent 60%)',
+    gradient: 'linear-gradient(135deg, #0d5c2e 0%, #1a6b3a 50%, #aaaaaa 100%)',
+    gradientBg: `
+      radial-gradient(ellipse at 15% 50%, rgba(26,107,58,0.2) 0%, transparent 55%),
+      radial-gradient(ellipse at 85% 20%, rgba(170,170,170,0.08) 0%, transparent 50%),
+      radial-gradient(ellipse at 50% 90%, rgba(13,92,46,0.15) 0%, transparent 40%)
+    `,
+    particleColor: 'rgba(170,170,170,0.5)',
+    shimmer: 'linear-gradient(90deg, transparent, rgba(170,170,170,0.1), transparent)',
+    cardGlow: '0 0 30px rgba(26,107,58,0.3), 0 0 60px rgba(170,170,170,0.08)',
   },
   ravenclaw: {
     name: 'Ravenclaw',
     animal: '🦅',
-    traits: 'Wisdom, Wit, Learning',
-    primary: '#1a3a6b',
-    secondary: '#2980b9',
-    accent: '#c9a84c',
-    accent2: '#e8c96a',
-    bg: '#05070d',
-    bg2: '#080d18',
-    bg3: '#0d1525',
-    bg4: '#121e33',
-    border: '#1a2d4d',
-    border2: '#2d4d80',
-    glow: 'rgba(26,58,107,0.2)',
-    textPrimary: '#c8d8f0',
-    textSecondary: '#6e8eb8',
-    textDim: '#2d4d80',
-    gradient: 'linear-gradient(135deg, #0d1e3d, #1a3a6b, #c9a84c)',
-    gradientBg: 'radial-gradient(ellipse at 20% 50%, rgba(26,58,107,0.1) 0%, transparent 60%), radial-gradient(ellipse at 80% 20%, rgba(201,168,76,0.06) 0%, transparent 60%)',
+    traits: 'Wisdom · Wit · Learning',
+    primary: '#0e1a70',
+    secondary: '#1a2fa0',
+    accent: '#946b2d',
+    accent2: '#c9a84c',
+    bg: '#00020e',
+    bg2: '#000518',
+    bg3: '#000a28',
+    bg4: '#001040',
+    border: '#001a5c',
+    border2: '#002880',
+    glow: 'rgba(14,26,112,0.3)',
+    glowAccent: 'rgba(148,107,45,0.2)',
+    textPrimary: '#c8d8ff',
+    textSecondary: '#6e8ed4',
+    textDim: '#2d4d8a',
+    gradient: 'linear-gradient(135deg, #0e1a70 0%, #1a2fa0 50%, #946b2d 100%)',
+    gradientBg: `
+      radial-gradient(ellipse at 15% 50%, rgba(14,26,112,0.25) 0%, transparent 55%),
+      radial-gradient(ellipse at 85% 20%, rgba(148,107,45,0.15) 0%, transparent 50%),
+      radial-gradient(ellipse at 50% 90%, rgba(26,47,160,0.15) 0%, transparent 40%)
+    `,
+    particleColor: 'rgba(148,107,45,0.6)',
+    shimmer: 'linear-gradient(90deg, transparent, rgba(148,107,45,0.15), transparent)',
+    cardGlow: '0 0 30px rgba(14,26,112,0.4), 0 0 60px rgba(148,107,45,0.1)',
   },
   hufflepuff: {
     name: 'Hufflepuff',
     animal: '🦡',
-    traits: 'Loyalty, Patience, Hard Work',
-    primary: '#c9a84c',
-    secondary: '#e8c96a',
-    accent: '#2c2c2c',
-    accent2: '#4a4a4a',
-    bg: '#0d0b05',
-    bg2: '#151208',
-    bg3: '#1e1a0d',
-    bg4: '#2a2412',
-    border: '#3d3318',
-    border2: '#6b5a2d',
-    glow: 'rgba(201,168,76,0.15)',
-    textPrimary: '#f5ecc8',
-    textSecondary: '#c4a86e',
-    textDim: '#7a6030',
-    gradient: 'linear-gradient(135deg, #5a4a00, #c9a84c, #2c2c2c)',
-    gradientBg: 'radial-gradient(ellipse at 20% 50%, rgba(201,168,76,0.1) 0%, transparent 60%), radial-gradient(ellipse at 80% 20%, rgba(44,44,44,0.08) 0%, transparent 60%)',
+    traits: 'Loyalty · Patience · Hard Work',
+    primary: '#e8a800',
+    secondary: '#ffcc00',
+    accent: '#1a1a1a',
+    accent2: '#3a3a3a',
+    bg: '#0a0800',
+    bg2: '#150f00',
+    bg3: '#201800',
+    bg4: '#302400',
+    border: '#4a3800',
+    border2: '#6b5200',
+    glow: 'rgba(232,168,0,0.25)',
+    glowAccent: 'rgba(26,26,26,0.3)',
+    textPrimary: '#fff5c0',
+    textSecondary: '#d4a840',
+    textDim: '#7a6020',
+    gradient: 'linear-gradient(135deg, #e8a800 0%, #ffcc00 50%, #1a1a1a 100%)',
+    gradientBg: `
+      radial-gradient(ellipse at 15% 50%, rgba(232,168,0,0.2) 0%, transparent 55%),
+      radial-gradient(ellipse at 85% 20%, rgba(255,204,0,0.12) 0%, transparent 50%),
+      radial-gradient(ellipse at 50% 90%, rgba(232,168,0,0.12) 0%, transparent 40%)
+    `,
+    particleColor: 'rgba(255,204,0,0.6)',
+    shimmer: 'linear-gradient(90deg, transparent, rgba(255,204,0,0.2), transparent)',
+    cardGlow: '0 0 30px rgba(232,168,0,0.3), 0 0 60px rgba(255,204,0,0.1)',
   },
 };
 
@@ -102,28 +134,29 @@ export const HouseProvider = ({ children }) => {
     setHouseState(null);
   };
 
-  const theme = house ? HOUSES[house] : HOUSES.ravenclaw;
+  const theme = house ? HOUSES[house] : null;
 
-  // Apply CSS variables dynamically
   useEffect(() => {
     if (!theme) return;
-    const root = document.documentElement;
-    root.style.setProperty('--primary', theme.primary);
-    root.style.setProperty('--primary2', theme.secondary);
-    root.style.setProperty('--accent', theme.accent);
-    root.style.setProperty('--accent2', theme.accent2);
-    root.style.setProperty('--bg', theme.bg);
-    root.style.setProperty('--bg2', theme.bg2);
-    root.style.setProperty('--bg3', theme.bg3);
-    root.style.setProperty('--bg4', theme.bg4);
-    root.style.setProperty('--border', theme.border);
-    root.style.setProperty('--border2', theme.border2);
-    root.style.setProperty('--glow', theme.glow);
-    root.style.setProperty('--text', theme.textPrimary);
-    root.style.setProperty('--text2', theme.textSecondary);
-    root.style.setProperty('--text3', theme.textDim);
-    root.style.setProperty('--gradient', theme.gradient);
-    root.style.setProperty('--gradient-bg', theme.gradientBg);
+    const r = document.documentElement;
+    r.style.setProperty('--primary',      theme.primary);
+    r.style.setProperty('--primary2',     theme.secondary);
+    r.style.setProperty('--accent',       theme.accent);
+    r.style.setProperty('--accent2',      theme.accent2);
+    r.style.setProperty('--bg',           theme.bg);
+    r.style.setProperty('--bg2',          theme.bg2);
+    r.style.setProperty('--bg3',          theme.bg3);
+    r.style.setProperty('--bg4',          theme.bg4);
+    r.style.setProperty('--border',       theme.border);
+    r.style.setProperty('--border2',      theme.border2);
+    r.style.setProperty('--glow',         theme.glow);
+    r.style.setProperty('--glow-accent',  theme.glowAccent);
+    r.style.setProperty('--text',         theme.textPrimary);
+    r.style.setProperty('--text2',        theme.textSecondary);
+    r.style.setProperty('--text3',        theme.textDim);
+    r.style.setProperty('--gradient',     theme.gradient);
+    r.style.setProperty('--shimmer',      theme.shimmer);
+    r.style.setProperty('--card-glow',    theme.cardGlow);
   }, [house]);
 
   return (
@@ -134,4 +167,3 @@ export const HouseProvider = ({ children }) => {
 };
 
 export const useHouse = () => useContext(HouseContext);
-export { HOUSES };
