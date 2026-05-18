@@ -53,8 +53,8 @@ export default function Dashboard({ onNavigate }) {
         <button className="btn btn-primary" onClick={() => setModal('add')}>✦ Add Scroll</button>
       </div>
 
-      <div className="stats-row" style={{ padding: '2px', background: 'linear-gradient(135deg, var(--border), var(--border2), var(--border))', borderRadius: 'calc(var(--radius) + 2px)', boxShadow: '0 0 20px var(--glow)' }}>
-        <div style={{ display: 'contents' }}>
+      <div style={{ padding: '2px', background: 'linear-gradient(135deg, var(--border), var(--border2), var(--border))', borderRadius: 'calc(var(--radius) + 2px)', boxShadow: '0 0 20px var(--glow)', marginBottom: 36 }}>
+        <div className="stats-row" style={{ margin: 0 }}>
         {stats.map(({ icon: Icon, label, value, color, bg }) => (
           <div key={label} className="stat-card">
             <div className="stat-icon" style={{ background: bg, color }}><Icon size={18} /></div>

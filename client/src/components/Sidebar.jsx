@@ -55,7 +55,7 @@ export default function Sidebar({ current, onNavigate }) {
           <div className="avatar">{user?.name?.[0]?.toUpperCase()}</div>
           <div style={{ flex: 1, overflow: 'hidden' }}>
             <div style={{ fontSize: 13, fontFamily: 'Cinzel, serif', fontWeight: 600, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', color: 'var(--text)' }}>{user?.name}</div>
-            <div style={{ fontSize: 11, color: 'var(--text3)', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', fontStyle: 'italic' }}>{user?.email}</div>
+            <div style={{ fontSize: 11, color: 'var(--text2)', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', fontStyle: 'italic' }}>{user?.email}</div>
           </div>
         </div>
         <button className="nav-item" onClick={logout} style={{ color: '#e07070' }}>
