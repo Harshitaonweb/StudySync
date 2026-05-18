@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { signup, login, me, logout } = require('../controllers/authController');
 const { authenticate } = require('../middleware/auth');
 const validate = require('../middleware/validate');
-const passport = require('../config/passport');
+const passport = require('../config/passport').passport;
 const { z } = require('zod');
 
 const signupSchema = z.object({

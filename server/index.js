@@ -5,9 +5,12 @@ const helmet = require('helmet');
 const morgan = require('morgan');
 const cookieParser = require('cookie-parser');
 const rateLimit = require('express-rate-limit');
-const passport = require('./config/passport');
+const { passport, configurePassport } = require('./config/passport');
 const errorHandler = require('./middleware/errorHandler');
 const logger = require('./config/logger');
+
+// Configure passport AFTER dotenv is loaded
+configurePassport();
 
 const app = express();
 
