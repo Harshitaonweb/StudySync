@@ -63,16 +63,16 @@ export default function HouseBackground() {
       <div style={{ position:'fixed', inset:0, zIndex:0, pointerEvents:'none', background: theme.gradientBg, transition:'background 1s ease' }} />
 
       {/* Large primary orb — top left */}
-      <div style={{ position:'fixed', zIndex:0, pointerEvents:'none', top:'-15%', left:'-10%', width:'55vw', height:'55vw', borderRadius:'50%', background:`radial-gradient(circle at 40% 40%, ${theme.primary}55 0%, ${theme.primary}22 40%, transparent 70%)`, animation:'drift1 14s ease-in-out infinite', filter:'blur(40px)', transition:'background 1s' }} />
+      <div style={{ position:'fixed', zIndex:0, pointerEvents:'none', top:'-15%', left:'-10%', width:'55vw', height:'55vw', borderRadius:'50%', background:`radial-gradient(circle at 40% 40%, ${theme.primary}33 0%, ${theme.primary}11 40%, transparent 70%)`, animation:'drift1 14s ease-in-out infinite', filter:'blur(60px)', transition:'background 1s' }} />
 
       {/* Large accent orb — bottom right */}
-      <div style={{ position:'fixed', zIndex:0, pointerEvents:'none', bottom:'-20%', right:'-15%', width:'60vw', height:'60vw', borderRadius:'50%', background:`radial-gradient(circle at 60% 60%, ${theme.accent}44 0%, ${theme.accent}18 40%, transparent 70%)`, animation:'drift2 18s ease-in-out infinite', filter:'blur(50px)', transition:'background 1s' }} />
+      <div style={{ position:'fixed', zIndex:0, pointerEvents:'none', bottom:'-20%', right:'-15%', width:'60vw', height:'60vw', borderRadius:'50%', background:`radial-gradient(circle at 60% 60%, ${theme.accent}22 0%, ${theme.accent}0a 40%, transparent 70%)`, animation:'drift2 18s ease-in-out infinite', filter:'blur(70px)', transition:'background 1s' }} />
 
       {/* Mid orb */}
-      <div style={{ position:'fixed', zIndex:0, pointerEvents:'none', top:'30%', left:'35%', width:'35vw', height:'35vw', borderRadius:'50%', background:`radial-gradient(circle, ${theme.secondary}30 0%, transparent 70%)`, animation:'drift3 22s ease-in-out infinite', filter:'blur(60px)', transition:'background 1s' }} />
+      <div style={{ position:'fixed', zIndex:0, pointerEvents:'none', top:'30%', left:'35%', width:'35vw', height:'35vw', borderRadius:'50%', background:`radial-gradient(circle, ${theme.secondary}18 0%, transparent 70%)`, animation:'drift3 22s ease-in-out infinite', filter:'blur(80px)', transition:'background 1s' }} />
 
       {/* Small bright orb — top right */}
-      <div style={{ position:'fixed', zIndex:0, pointerEvents:'none', top:'5%', right:'10%', width:'20vw', height:'20vw', borderRadius:'50%', background:`radial-gradient(circle, ${theme.accent2}50 0%, transparent 70%)`, animation:'drift4 10s ease-in-out infinite', filter:'blur(30px)', transition:'background 1s' }} />
+      <div style={{ position:'fixed', zIndex:0, pointerEvents:'none', top:'5%', right:'10%', width:'20vw', height:'20vw', borderRadius:'50%', background:`radial-gradient(circle, ${theme.accent2}28 0%, transparent 70%)`, animation:'drift4 10s ease-in-out infinite', filter:'blur(40px)', transition:'background 1s' }} />
 
       {/* ── HP DOODLES ── */}
       {POSITIONS.map((pos, i) => {
