@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useHouse, HOUSES } from '../context/HouseContext';
 import { useAuth } from '../context/AuthContext';
+import HogwartsCastle from '../components/HogwartsCastle';
 
 const LORE = {
   gryffindor: {
@@ -48,8 +49,7 @@ export default function HouseSelection() {
       fontFamily: "'Crimson Text', serif",
     }}>
       {/* Starfield */}
-      {[...Array(40)].map((_, i) => (
-        <div key={i} style={{
+      {[...Array(40)].map((_, i) => (        <div key={i} style={{
           position: 'absolute',
           width: i % 5 === 0 ? 2 : 1,
           height: i % 5 === 0 ? 2 : 1,
@@ -243,6 +243,8 @@ export default function HouseSelection() {
           You may change your house anytime from the sidebar
         </p>
       </div>
+      {/* Castle at bottom */}
+      <HogwartsCastle />
     </div>
   );
 }

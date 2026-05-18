@@ -10,6 +10,7 @@ import GroupPage from './pages/GroupPage';
 import SearchPage from './pages/SearchPage';
 import HouseSelection from './pages/HouseSelection';
 import HouseBackground from './components/HouseBackground';
+import HogwartsCastle from './components/HogwartsCastle';
 import Sidebar from './components/Sidebar';
 
 function AppInner() {
@@ -58,6 +59,7 @@ function AppInner() {
   return (
     <div className="layout">
       <HouseBackground />
+      <HogwartsCastle />
       <Sidebar current={page} onNavigate={setPage} />
       <main className="main">
         {pages[page] || pages.dashboard}
