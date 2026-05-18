@@ -44,8 +44,11 @@ export default function Dashboard({ onNavigate }) {
     <div>
       <div className="page-header">
         <div>
-          <div className="page-title">Welcome, {user?.name?.split(' ')[0]} ⚡</div>
-          <div className="page-subtitle">Your magical library awaits, young wizard</div>
+          <div className="page-title">
+            Welcome, {user?.name?.split(' ')[0]}&nbsp;
+            <span style={{ display: 'inline-block', animation: 'float 3s ease-in-out infinite', filter: 'drop-shadow(0 0 8px gold)' }}>⚡</span>
+          </div>
+          <div className="page-subtitle" style={{ color: 'var(--text2)' }}>Your magical library awaits, young wizard</div>
         </div>
         <button className="btn btn-primary" onClick={() => setModal('add')}>✦ Add Scroll</button>
       </div>
