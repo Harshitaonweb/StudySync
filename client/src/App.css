@@ -142,17 +142,9 @@
 .page-header {
   display: flex; align-items: center; justify-content: space-between;
   margin-bottom: 32px; padding-bottom: 20px;
-  border-bottom: 1px solid var(--border);
   position: relative;
 }
-.page-header::after {
-  content: '✦';
-  position: absolute; bottom: -11px; left: 50%;
-  transform: translateX(-50%);
-  color: var(--accent2); font-size: 14px;
-  background: var(--bg); padding: 0 10px;
-  text-shadow: 0 0 10px var(--glow-accent);
-}
+.page-header::after { display: none; }
 
 .page-title {
   font-family: 'Cinzel', serif;
