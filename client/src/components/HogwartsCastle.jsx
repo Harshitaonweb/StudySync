@@ -54,19 +54,21 @@ export default function HogwartsCastle() {
   return (
     <div style={{
       position: 'fixed',
-      bottom: 0, left: 0, right: 0,
+      bottom: 0,
+      left: 0,
+      width: '100vw',
       zIndex: 0,
       pointerEvents: 'none',
-      height: '30vh',
-      minHeight: 180,
+      height: '40vh',
+      minHeight: 220,
       overflow: 'hidden',
-      opacity: 0.35,
-      maskImage: 'linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.6) 30%, black 100%)',
-      WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.6) 30%, black 100%)',
+      opacity: 0.4,
+      maskImage: 'linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.5) 25%, black 70%)',
+      WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.5) 25%, black 70%)',
     }}>
       <svg
         viewBox="0 0 1440 400"
-        preserveAspectRatio="xMidYMax meet"
+        preserveAspectRatio="xMidYMax slice"
         style={{ width: '100%', height: '100%', display: 'block' }}
         xmlns="http://www.w3.org/2000/svg"
       >
