@@ -179,8 +179,8 @@ export default function HogwartsCastle() {
             <rect key={i} x={x} y="57" width="12" height="14" fill={p.castleMid} />
           ))}
           {/* Tower flag */}
-          <line x1="520" y1="10" x2="520" y2="40" stroke={theme.accent2} strokeWidth="1.5" />
-          <polygon points="520,10 545,20 520,30" fill={theme.accent2} opacity="0.8" />
+          <line x1="520" y1="10" x2="520" y2="40" stroke={themeColor.accent2} strokeWidth="1.5" />
+          <polygon points="520,10 545,20 520,30" fill={themeColor.accent2} opacity="0.8" />
 
           {/* Left hall tower */}
           <rect x="370" y="140" width="65" height="260" fill="url(#wallGrad)" />
