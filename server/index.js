@@ -23,8 +23,8 @@ app.use(morgan('dev'));
 app.use(passport.initialize());
 
 // Rate limiting
-app.use('/api/auth', rateLimit({ windowMs: 15 * 60 * 1000, max: 20 }));
-app.use('/api', rateLimit({ windowMs: 15 * 60 * 1000, max: 200 }));
+app.use('/api/auth', rateLimit({ windowMs: 15 * 60 * 1000, max: 200 }));
+app.use('/api', rateLimit({ windowMs: 15 * 60 * 1000, max: 1000 }));
 
 // Routes
 app.use('/api/auth', require('./routes/auth'));
