@@ -11,8 +11,7 @@
 :root {
   --font-heading: 'Cinzel Decorative', 'Cinzel', serif;
   --font-body: 'Crimson Text', Georgia, serif;
-  --primary:     #1a3a9a;
-  --primary2:    #2a50c0;
+  --primary:     #1a3a9a;  --primary2:    #2a50c0;
   --accent:      #b8860b;
   --accent2:     #daa520;
   --bg:          #00020f;
