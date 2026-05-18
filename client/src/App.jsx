@@ -68,12 +68,16 @@ function AppInner() {
   );
 }
 
+import ErrorBoundary from './components/ErrorBoundary';
+
 export default function App() {
   return (
-    <AuthProvider>
-      <HouseProvider>
-        <AppInner />
-      </HouseProvider>
-    </AuthProvider>
+    <ErrorBoundary>
+      <AuthProvider>
+        <HouseProvider>
+          <AppInner />
+        </HouseProvider>
+      </AuthProvider>
+    </ErrorBoundary>
   );
 }
