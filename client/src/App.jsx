@@ -9,6 +9,7 @@ import ResourcesPage from './pages/ResourcesPage';
 import GroupPage from './pages/GroupPage';
 import SearchPage from './pages/SearchPage';
 import HouseSelection from './pages/HouseSelection';
+import HouseBackground from './components/HouseBackground';
 import Sidebar from './components/Sidebar';
 
 function AppInner() {
@@ -56,6 +57,7 @@ function AppInner() {
 
   return (
     <div className="layout">
+      <HouseBackground />
       <Sidebar current={page} onNavigate={setPage} />
       <main className="main">
         {pages[page] || pages.dashboard}
