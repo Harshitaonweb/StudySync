@@ -94,7 +94,7 @@ export default function HogwartsCastle() {
 
           {/* Castle shadow/depth */}
           <filter id="castleShadow">
-            <feDropShadow dx="0" dy="-4" stdDeviation="6" floodColor={theme.primary} floodOpacity="0.3" />
+            <feDropShadow dx="0" dy="-4" stdDeviation="6" floodColor={themeColor.primary} floodOpacity="0.3" />
           </filter>
 
           {/* Fog gradient */}
