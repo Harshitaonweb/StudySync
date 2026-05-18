@@ -15,7 +15,6 @@
   box-shadow: 4px 0 30px rgba(0,0,0,0.5);
   transition: background 0.6s;
 }
-
 /* Sidebar glow strip */
 .sidebar::after {
   content: '';
@@ -134,6 +133,9 @@
   padding: 36px;
   max-width: calc(100vw - 256px);
   min-height: 100vh;
+  position: relative;
+  z-index: 1;
+  padding-bottom: 80px;
 }
 
 /* ── Page header ── */

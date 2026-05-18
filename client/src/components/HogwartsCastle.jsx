@@ -57,11 +57,12 @@ export default function HogwartsCastle() {
       bottom: 0, left: 0, right: 0,
       zIndex: 0,
       pointerEvents: 'none',
-      height: '45vh',
-      minHeight: 280,
+      height: '30vh',
+      minHeight: 180,
       overflow: 'hidden',
-      maskImage: 'linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.4) 20%, rgba(0,0,0,0.8) 50%, black 100%)',
-      WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.4) 20%, rgba(0,0,0,0.8) 50%, black 100%)',
+      opacity: 0.35,
+      maskImage: 'linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.6) 30%, black 100%)',
+      WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.6) 30%, black 100%)',
     }}>
       <svg
         viewBox="0 0 1440 400"
@@ -115,8 +116,8 @@ export default function HogwartsCastle() {
         <rect x="0" y="0" width="1440" height="400" fill="url(#skyGrad)" />
 
         {/* Moon */}
-        <circle cx="1200" cy="60" r="35" fill={p.moon} opacity="0.9" filter="url(#moonGlow)" />
-        <circle cx="1200" cy="60" r="50" fill={p.moonGlow} opacity="0.4" />
+        <circle cx="1200" cy="60" r="22" fill={p.moon} opacity="0.7" filter="url(#moonGlow)" />
+        <circle cx="1200" cy="60" r="35" fill={p.moonGlow} opacity="0.25" />
 
         {/* Stars */}
         {[
