@@ -58,7 +58,7 @@
   border-radius: var(--radius);
   color: var(--text2);
   font-size: 13px; font-family: 'Cinzel', serif;
-  font-weight: 400; letter-spacing: 0.04em;
+  font-weight: 500; letter-spacing: 0.04em;
   cursor: pointer; transition: all 0.2s;
   margin-bottom: 3px;
   border: none; background: none;
