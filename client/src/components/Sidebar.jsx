@@ -46,7 +46,7 @@ export default function Sidebar({ current, onNavigate }) {
 
       <div style={{ margin: '20px 12px', height: 1, background: 'linear-gradient(90deg, transparent, var(--border2), transparent)' }} />
 
-      <div style={{ padding: '0 12px', fontSize: 11, color: 'var(--text3)', fontStyle: 'italic', textAlign: 'center', lineHeight: 1.7 }}>
+      <div style={{ padding: '0 12px', fontSize: 11, color: 'var(--text2)', fontStyle: 'italic', textAlign: 'center', lineHeight: 1.7 }}>
         "It is our choices that show<br />what we truly are."
       </div>
 

@@ -53,20 +53,22 @@ export default function Dashboard({ onNavigate }) {
         <button className="btn btn-primary" onClick={() => setModal('add')}>✦ Add Scroll</button>
       </div>
 
-      <div className="stats-row">
+      <div className="stats-row" style={{ padding: '2px', background: 'linear-gradient(135deg, var(--border), var(--border2), var(--border))', borderRadius: 'calc(var(--radius) + 2px)', boxShadow: '0 0 20px var(--glow)' }}>
+        <div style={{ display: 'contents' }}>
         {stats.map(({ icon: Icon, label, value, color, bg }) => (
           <div key={label} className="stat-card">
             <div className="stat-icon" style={{ background: bg, color }}><Icon size={18} /></div>
             <div>
-              <div className="stat-value">{value}</div>
-              <div className="stat-label">{label}</div>
+              <div className="stat-value" style={{ color: 'var(--accent2)' }}>{value}</div>
+              <div className="stat-label" style={{ color: 'var(--text2)' }}>{label}</div>
             </div>
           </div>
         ))}
+        </div>
       </div>
 
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 16 }}>
-        <h2 style={{ fontSize: 14, fontFamily: 'Cinzel, serif', color: 'var(--text2)', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
+        <h2 className="section-heading-shimmer" style={{ fontSize: 14, fontFamily: 'Cinzel, serif', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
           ✦ Recent Scrolls
         </h2>
         <button className="btn btn-ghost" style={{ fontSize: 12, padding: '5px 12px' }} onClick={() => onNavigate('resources')}>
