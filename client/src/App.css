@@ -140,7 +140,10 @@
 .page-header {
   display: flex; align-items: center; justify-content: space-between;
   margin-bottom: 32px; padding-bottom: 20px;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid transparent;
+  background-image: linear-gradient(var(--bg), var(--bg)), linear-gradient(90deg, transparent, var(--border2), transparent);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
   position: relative;
 }
 .page-header::after {
