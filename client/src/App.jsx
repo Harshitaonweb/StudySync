@@ -11,6 +11,7 @@ import SearchPage from './pages/SearchPage';
 import HouseSelection from './pages/HouseSelection';
 import HouseBackground from './components/HouseBackground';
 import HogwartsCastle from './components/HogwartsCastle';
+import Footer from './components/Footer';
 import Sidebar from './components/Sidebar';
 
 function AppInner() {
@@ -60,6 +61,7 @@ function AppInner() {
     <div className="layout">
       <HouseBackground />
       <HogwartsCastle />
+      <Footer />
       <Sidebar current={page} onNavigate={setPage} />
       <main className="main">
         {pages[page] || pages.dashboard}
