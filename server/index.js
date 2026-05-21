@@ -36,6 +36,14 @@ app.use('/api/upload', require('./routes/upload'));
 
 app.get('/health', (req, res) => res.json({ status: 'ok' }));
 
+// Keep-alive ping for Render free tier
+if (process.env.NODE_ENV === 'production') {
+  setInterval(() => {
+    const url = process.env.RENDER_EXTERNAL_URL || `http://localhost:${process.env.PORT || 5001}`;
+    fetch(`${url}/health`).catch(() => {});
+  }, 10 * 60 * 1000); // every 10 minutes
+}
+
 app.use(errorHandler);
 
 const PORT = process.env.PORT || 5000;
