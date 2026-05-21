@@ -31,8 +31,8 @@
 }
 
 .sidebar-logo span {
-  font-family: 'Cinzel', serif;
-  font-size: 18px; font-weight: 900;
+  font-family: 'HarryP', 'Cinzel Decorative', serif;
+  font-size: 22px; font-weight: 400;
   background: var(--gradient);
   -webkit-background-clip: text; background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -368,7 +368,8 @@
   box-shadow: 0 0 30px rgba(100,60,200,0.3), 0 0 60px rgba(201,168,76,0.1);
 }
 .auth-logo h1 {
-  font-family: 'Cinzel', serif; font-size: 26px; font-weight: 900;
+  font-family: 'HarryP', 'Cinzel Decorative', serif;
+  font-size: 32px; font-weight: 400;
   background: linear-gradient(135deg, #c9a84c, #e8c96a, #c9a84c);
   -webkit-background-clip: text; background-clip: text;
   -webkit-text-fill-color: transparent;
