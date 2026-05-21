@@ -147,8 +147,8 @@
 .page-header::after { display: none; }
 
 .page-title {
-  font-family: 'Cinzel', serif;
-  font-size: 24px; font-weight: 700;
+  font-family: 'HarryP', 'Cinzel Decorative', serif;
+  font-size: 28px; font-weight: 400;
   color: var(--accent2);
   letter-spacing: 0.08em;
   text-shadow: 0 0 30px var(--glow-accent), 0 0 60px var(--glow), 0 2px 4px rgba(0,0,0,0.5);
