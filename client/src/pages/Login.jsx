@@ -22,7 +22,7 @@ export default function Login({ onSwitch }) {
       <div className="auth-card">
         <div className="auth-logo">
           <div className="logo-icon">⚡</div>
-          <h1>StudySync</h1>
+          <h1>Spellbound Library</h1>
           <p>Enter the Wizarding Library</p>
         </div>
 
