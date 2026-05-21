@@ -17,7 +17,7 @@ export default function Sidebar({ current, onNavigate }) {
     <aside className="sidebar">
       <div className="sidebar-logo">
         <div className="logo-icon">⚡</div>
-        <span>StudySync</span>
+        <span>Spellbound Library</span>
       </div>
 
       {/* House badge */}
