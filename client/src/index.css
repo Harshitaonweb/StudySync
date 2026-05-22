@@ -22,9 +22,9 @@
   --border2:     #0028a0;
   --glow:        rgba(26,58,154,0.4);
   --glow-accent: rgba(184,134,11,0.25);
-  --text:        #eef4ff;
-  --text2:       #a0c0ff;
-  --text3:       #6890e0;
+  --text:        #ffffff;
+  --text2:       #a8c8ff;
+  --text3:       #7090e0;
   --gradient:    linear-gradient(135deg, #0a1060, #1a3a9a, #b8860b);
   --shimmer:     linear-gradient(90deg, transparent, rgba(184,134,11,0.2), transparent);
   --card-glow:   0 0 30px rgba(26,58,154,0.5), 0 0 60px rgba(184,134,11,0.15);
