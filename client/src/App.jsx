@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import './App.css';
 import { AuthProvider, useAuth } from './context/AuthContext';
 import { HouseProvider, useHouse } from './context/HouseContext';
+import { useSounds } from './hooks/useSounds';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Dashboard from './pages/Dashboard';
@@ -19,6 +20,9 @@ function AppInner() {
   const { house } = useHouse();
   const [authPage, setAuthPage] = useState('login');
   const [page, setPage] = useState('dashboard');
+
+  // Global magical sounds
+  useSounds();
 
   // Handle redirect back from Google OAuth
   useEffect(() => {
