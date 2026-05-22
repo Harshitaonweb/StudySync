@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useHouse, HOUSES } from '../context/HouseContext';
 import { useAuth } from '../context/AuthContext';
 import HogwartsCastle from '../components/HogwartsCastle';
+import { playSorting } from '../utils/sounds';
 
 const LORE = {
   gryffindor: {
@@ -35,6 +36,7 @@ export default function HouseSelection() {
   const confirm = () => {
     if (!selected) return;
     setConfirming(true);
+    playSorting();
     setTimeout(() => setHouse(selected), 800);
   };
 
