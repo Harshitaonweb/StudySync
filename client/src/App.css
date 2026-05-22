@@ -370,11 +370,11 @@
 .auth-logo h1 {
   font-family: 'HarryP', 'Cinzel Decorative', serif;
   font-size: 32px; font-weight: 400;
-  background: linear-gradient(135deg, #c9a84c, #e8c96a, #c9a84c);
+  background: linear-gradient(135deg, #ffd700, #fff5a0, #ffd700);
   -webkit-background-clip: text; background-clip: text;
   -webkit-text-fill-color: transparent;
   letter-spacing: 0.12em;
-  filter: drop-shadow(0 0 10px rgba(201,168,76,0.4));
+  filter: drop-shadow(0 0 14px rgba(255,215,0,0.7));
 }
 .auth-logo p { font-size: 14px; color: rgba(200,185,240,0.75); margin-top: 8px; font-style: italic; }
 
