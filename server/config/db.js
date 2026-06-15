@@ -1,13 +1,10 @@
 const { Pool } = require('pg');
 
-const { Pool } = require('pg');
-
 const pool = new Pool(
   process.env.DATABASE_URL
     ? {
         connectionString: process.env.DATABASE_URL,
         ssl: process.env.NODE_ENV === 'production' ? { rejectUnauthorized: false } : false,
-        password: process.env.DB_PASSWORD || undefined,
       }
     : {
         host: 'localhost',
