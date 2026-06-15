@@ -32,6 +32,14 @@ export default function HouseSelection() {
   const { user } = useAuth();
   const [selected, setSelected] = useState(null);
   const [confirming, setConfirming] = useState(false);
+  const btnRef = useRef(null);
+
+  const selectHouse = (key) => {
+    setSelected(key);
+    setTimeout(() => {
+      btnRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }, 100);
+  };
 
   const confirm = () => {
     if (!selected) return;
@@ -110,7 +118,7 @@ export default function HouseSelection() {
           return (
             <div
               key={key}
-              onClick={() => setSelected(key)}
+              onClick={() => selectHouse(key)}
               style={{
                 background: isSelected
                   ? `linear-gradient(135deg, ${h.bg2} 0%, ${h.bg3} 50%, ${h.bg4} 100%)`
@@ -216,7 +224,7 @@ export default function HouseSelection() {
       </div>
 
       {/* Confirm button */}
-      <div style={{ marginTop: 36, textAlign: 'center', position: 'relative', zIndex: 1 }}>
+      <div ref={btnRef} style={{ marginTop: 36, textAlign: 'center', position: 'relative', zIndex: 1 }}>
         {selected ? (
           <button
             onClick={confirm}
