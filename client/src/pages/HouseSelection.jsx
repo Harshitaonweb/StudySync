@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { useHouse, HOUSES } from '../context/HouseContext';
 import { useAuth } from '../context/AuthContext';
 import HogwartsCastle from '../components/HogwartsCastle';
